@@ -1,0 +1,8 @@
+.coverage
+composer.lock
+npm-debug.log
+/node_modules
+/bin
+/resources/build
+/vendor
+/coverage

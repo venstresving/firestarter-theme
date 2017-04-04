@@ -1,0 +1,9 @@
+{
+    "name": "turnleft/firestarter-theme",
+    "type": "streams-addon",
+    "autoload": {
+        "psr-4": {
+            "Turnleft\\FirestarterTheme\\": "src/"
+        }
+    }
+}
