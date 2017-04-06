@@ -1,8 +1,9 @@
-// Lodash helper library
 window._ = require('lodash');
-
-// Require jQuery
 window.$ = window.jQuery = require('jquery');
+window.Vue = require('vue');
+window.axios = require('axios');
 
-// Require Bootstrap and plugins
-require('bootstrap-sass');
+window.axios.defaults.headers.common = {
+    'X-CSRF-TOKEN': window.CSRF_TOKEN,
+    'X-Requested-With': 'XMLHttpRequest'
+};

@@ -1,10 +1,12 @@
 require('./bootstrap');
 
-// Boot
-(function($){
-    $(document).ready(function() {
+// Page Components
+import Common from './pages/Common';
 
-        //
-
-    });
-})(jQuery);
+// Boot Vue
+const app = new Vue({
+    el: '#app',
+    components: {
+        Common
+    }
+});

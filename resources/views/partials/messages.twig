@@ -1,11 +1,7 @@
 <section id="messages">
-
-    <!-- Success Messages -->
     {% if message_exists('success') %}
-        <div class="alert alert-success alert-dismissible">
-            <button type="button" class="close" data-dismiss="alert">
-                <span>&times;</span><span class="sr-only">Close</span>
-            </button>
+        <div class="notification is-success">
+            <button class="delete"></button>
 
             {% for message in message_get('success') %}
                 {{ trans(message)|markdown }}
@@ -13,12 +9,9 @@
         </div>
     {% endif %}
 
-    <!-- Informational Messages -->
     {% if message_exists('info') %}
-        <div class="alert alert-info alert-dismissible">
-            <button type="button" class="close" data-dismiss="alert">
-                <span>&times;</span><span class="sr-only">Close</span>
-            </button>
+        <div class="notification is-info">
+            <button class="delete"></button>
 
             {% for message in message_get('info') %}
                 {{ trans(message)|markdown }}
@@ -26,13 +19,9 @@
         </div>
     {% endif %}
 
-
-    <!-- Warning Messages -->
     {% if message_exists('warning') %}
-        <div class="alert alert-warning alert-dismissible">
-            <button type="button" class="close" data-dismiss="alert">
-                <span>&times;</span><span class="sr-only">Close</span>
-            </button>
+        <div class="notification is-warning">
+            <button class="delete"></button>
 
             {% for message in message_get('warning') %}
                 {{ trans(message)|markdown }}
@@ -43,15 +32,12 @@
 
     <!-- Error Messages -->
     {% if message_exists('error') %}
-        <div class="alert alert-danger alert-dismissible">
-            <button type="button" class="close" data-dismiss="alert">
-                <span>&times;</span><span class="sr-only">Close</span>
-            </button>
+        <div class="notification is-error">
+            <button class="delete"></button>
 
             {% for message in message_get('error') %}
                 {{ trans(message)|markdown }}
             {% endfor %}
         </div>
     {% endif %}
-
 </section>

@@ -1,0 +1,6 @@
+{{ asset_add("app.js", "theme::build/assets/js/app.js") }}
+{{ html_script(asset_path("app.js")) }}
+
+{% for script in asset_scripts("scripts.js") %}
+    {{ script|raw }}
+{% endfor %}

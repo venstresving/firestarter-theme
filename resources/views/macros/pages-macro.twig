@@ -1,0 +1,8 @@
+{% macro links(pages, collection, options, depth) %}
+    {% for page in pages %}
+        <a class="nav-item" href="{{ url(page.path) }}">
+            {{ page.title }}
+        </a>
+        {# Bulma does not have dropdowns yet, vue-blu does, will look into that #}
+    {% endfor %}
+{% endmacro %}

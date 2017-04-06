@@ -1,8 +1,9 @@
-<footer id="footer">
-    <div class="container text-center text-muted">
-
-        {#&copy;{{ 'now'|date('Y') }} {{ setting_value('streams::name', 'Your Site') }}, All rights reserved.#}
-        &copy;{{ 'now'|date('Y') }} Your Company, All rights reserved.
-
+<footer class="footer">
+    <div class="container">
+        <div class="content has-text-centered">
+            <p>
+                &copy; {{ 'now'|date('Y') }} {{ setting_value('streams::name', 'Your Site') }}. {{ trans('turnleft.theme.firestarter::addon.copyright_notice') }}
+            </p>
+        </div>
     </div>
 </footer>

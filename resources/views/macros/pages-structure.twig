@@ -1,0 +1,3 @@
+{% import options.get('macro', 'anomaly.module.pages::macro') as macro %}
+
+{{ macro.links(options.parent ? pages.children(options.parent) : pages.top(), pages, options, 1) }}
